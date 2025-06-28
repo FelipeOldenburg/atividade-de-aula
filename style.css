@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1603979649806-5299879db16b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW4lMjBsYWtlfGVufDB8fDB8fHww');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 5vmin;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vmin 3vmax;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 3vmin;
+  justify-content: center;
+  flex: 1;
+}
+
+.menu li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 1.6vmin;
+  transition: all 0.3s ease;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.menu li a:hover {
+  font-size: 1.8vmin;
+  font-weight: bold;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2vmin;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 2vmin;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    padding: 2vmin 0;
+    gap: 2vmin;
+    z-index: 1000;
+  }
+
+  .hero.menu-open .menu {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 1vmin 0;
+  }
+}
+
+.menu-icon i {
+  color: white;
+  font-size: 2.5vmin;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mountain-icon {
+  position: absolute;
+  top: 5vmin;
+  left: 5vmin;
+  transform: scale(1.5);
+}
+
+.menu-icon i:hover {
+  transform: scale(1.1);
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h2 {
+  font-family: 'playfair display', serif;
+  font-size: 4vmin;
+}
+
+.hero-text h1 {
+  font-family: 'playfair display', serif;
+  font-size: 6vmax;
+  margin: 1vmin 0;
+}
+
+button {
+  margin-top: 2vmin;
+  padding: 1.2vmin 4vmin;
+  font-size: 2vmin;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
